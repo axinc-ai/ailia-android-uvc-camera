@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/UVC4UnityAndroidPlugin/Samples/Scenes/UVC2DScene.unity
     guid: d9c653ce29884b648bd83d4066fe46c0
+  - enabled: 1
+    path: Assets/AXIP/AILIA/Samples/Scenes/ailia_detector.unity
+    guid: 1896b567202e8064b99c13376ea964ed
   m_configObjects: {}

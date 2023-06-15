@@ -80,7 +80,7 @@ public class AiliaDetectorSample : AiliaRenderer {
         //Get camera image
         int tex_width = ailia_camera.GetWidth();
         int tex_height = ailia_camera.GetHeight();
-        if(preview_texture==null){
+        if(preview_texture==null || preview_texture.width != tex_width || preview_texture.height != tex_height){
             preview_texture = new Texture2D(tex_width,tex_height);
             raw_image.texture = preview_texture;
         }

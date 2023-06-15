@@ -21,7 +21,13 @@ https://github.com/saki4510t/UVC4UnityAndroid/tree/master/release
 
 ## Folder structure
 
+The folder structure after import is as follows.
+
 ![Tutorial/folder.png](Tutorial/folder.png)
+
+Set your Render settings to OpenGL, as it won't work with Vulkan.
+
+![Tutorial/render.png](Tutorial/render.png)
 
 ## Run
 
@@ -34,3 +40,9 @@ Open and Run unity scene.
 In UVC4UnityAndroid, you can get the camera image by dropping UVCDrawer.prefab to Scene and giving UI/RawImage to RenderTargets of prefab.
 
 GetPixels32 can be executed by blitting the RawImage texture once and giving it Read/Write attributes. Infer the obtained pixel value with ailia.
+
+## Prebuilt app
+
+You can download prebuilt binary here.
+
+[ailia_uvc_camera.apk](Release/ailia_uvc_camera.apk)
