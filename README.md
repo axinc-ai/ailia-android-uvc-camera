@@ -8,36 +8,45 @@ In UVC4UnityAndroid, you can get the camera image by dropping UVCDrawer.prefab t
 
 GetPixels32 can be executed by blitting the RawImage texture once and giving it Read/Write attributes. Infer the obtained pixel value with ailia.
 
+## Environment
+
+- macOS 12.6
+- ailia SDK 1.2.14.1
+- Unity 2021.3.10f1
+- NuGet 3.1.0
+- UVC4UnityAndroid 0.2.1
+
 ## Setup
 
-Install ailia SDK unity package (Plugins folder only)
+Clone this repository.
+
+```
+git clone git@github.com:axinc-ai/ailia-android-uvc-camera.git
+```
+
+Import ailia SDK unity package (Plugins folder only)
 
 https://axinc.jp/trial/
 
-Install 'NuGet'(NuGetForUnity).
+Import NuGetForUnity.3.1.0.unitypackage.
+
+https://github.com/GlitchEnzo/NuGetForUnity/releases
+
+Instal System.Text.Json from NuGet.
+
 - Select Manage NuGet Packages from NuGet menu.
 - Search System.Text.Json from search box.
 - Select System.Text.Json and install it.
 
-https://github.com/GlitchEnzo/NuGetForUnity/releases
-
-Import release package of UVC4UnityAndroid
+Import release package of UVC4UnityAndroid_0.2.1.unitypackage
 
 https://github.com/saki4510t/UVC4UnityAndroid/tree/master/release
 
-## Tutorial
+## Project settings
 
 The folder structure after import is as follows.
 
 ![Tutorial/folder.png](Tutorial/folder.png)
-
-When I open the project, it looks like this.
-
-![Tutorial/project.png](Tutorial/project.png)
-
-The image of the camera is drawn to RawImage.
-
-![Tutorial/rawimage.png](Tutorial/rawimage.png)
 
 Set your Render settings to OpenGL, as it won't work with Vulkan.
 
@@ -47,8 +56,15 @@ Set your Render settings to OpenGL, as it won't work with Vulkan.
 
 Open and Run unity scene.
 
+```
 /Assets/AXIP/AILIA/Samples/Scenes/ailia_detector.unity
+```
 
+![Tutorial/project.png](Tutorial/project.png)
+
+The image of the camera is drawn to RawImage.
+
+![Tutorial/rawimage.png](Tutorial/rawimage.png)
 
 ## Prebuilt app
 
