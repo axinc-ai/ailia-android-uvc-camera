@@ -64,7 +64,9 @@ public class AiliaDetectorSample : AiliaRenderer {
     // Update is called once per frame
     void Update () {
         if(uvc_texture != null){
-            ailia_camera.CreateUvcCamera((Texture2D)uvc_texture.texture);
+            if(uvc_texture.texture != null){
+                ailia_camera.CreateUvcCamera((Texture2D)uvc_texture.texture);
+            }
         }
 
         if(!ailia_camera.IsEnable()){
