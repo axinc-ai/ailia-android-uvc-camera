@@ -14,7 +14,7 @@ GetPixels32 can be executed by blitting the RawImage texture once and giving it 
 - ailia SDK 1.2.14.1
 - Unity 2021.3.10f1
 - NuGet 3.1.0
-- UVC4UnityAndroid 0.2.1
+- UVC4UnityAndroid 0.2.1 or 0.2.2
 
 ## Setup
 
@@ -65,6 +65,14 @@ Open and Run unity scene.
 The image of the camera is drawn to RawImage.
 
 ![Tutorial/rawimage.png](Tutorial/rawimage.png)
+
+## For Arm Mali
+
+An OpenGL shader error may occur when using Arm Mali. In that case, you need to download the 0.2.2 binary from UVC4UnityAndroid's github.
+
+Specifically, download the Plugins folder from github and overwrite the 0.2.1 environment.
+
+![Tutorial/mali.png](Tutorial/mali.png)
 
 ## Prebuilt app
 
