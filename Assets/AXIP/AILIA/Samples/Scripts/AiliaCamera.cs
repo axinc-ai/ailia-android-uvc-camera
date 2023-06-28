@@ -80,6 +80,8 @@ public class AiliaCamera {
         return webcamTexture.videoRotationAngle;
     }
 
+    private Texture2D readableText = null;
+
     Texture2D duplicateTexture(Texture2D source)
     {
         RenderTexture renderTex = RenderTexture.GetTemporary(
@@ -92,7 +94,9 @@ public class AiliaCamera {
         Graphics.Blit(source, renderTex);
         RenderTexture previous = RenderTexture.active;
         RenderTexture.active = renderTex;
-        Texture2D readableText = new Texture2D(source.width, source.height);
+        if (readableText == null || readableText.width != source.width || readableText.height != source.height){
+            readableText = new Texture2D(source.width, source.height);
+        }
         readableText.ReadPixels(new Rect(0, 0, renderTex.width, renderTex.height), 0, 0);
         readableText.Apply();
         RenderTexture.active = previous;
